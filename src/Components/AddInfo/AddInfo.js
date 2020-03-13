@@ -1,4 +1,5 @@
 import React from 'react';
+import './AddInfo.css'
 
 const AddInfo = (props) => {
     const add= props.add;
@@ -7,9 +8,12 @@ const AddInfo = (props) => {
     let total=add.reduce((acc, current)=> acc+current.earning,0)
     return (
         <div>
-            <h4>Added Friends: {add.length}</h4>
-            <p>Total Income: {total}</p>
+            <div className="add">
+                <h4>Added Friends: {add.length}</h4>
+                <p>Total Income: {total}</p>
+            </div>
         </div>
+        
     );
 };
 
